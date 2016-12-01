@@ -51,7 +51,9 @@
   <ViewSwitcher
     android:id="@+id/vs"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:inAnimation="@android:anim/fade_in"
+    android:outAnimation="@android:anim/fade_out">
 
     <TextView
       android:id="@+id/tv_empty"

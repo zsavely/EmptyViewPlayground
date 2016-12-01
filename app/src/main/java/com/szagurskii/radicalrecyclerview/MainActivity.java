@@ -25,9 +25,6 @@ public class MainActivity extends Activity {
     setContentView(R.layout.activity_main);
     ButterKnife.bind(this);
 
-    viewSwitcher.setInAnimation(this, android.R.anim.fade_in);
-    viewSwitcher.setOutAnimation(this, android.R.anim.fade_out);
-
     basicAdapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
       @Override public void onChanged() {
         if (basicAdapter.getItemCount() == 0) {
