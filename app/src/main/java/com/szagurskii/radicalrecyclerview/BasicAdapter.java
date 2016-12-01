@@ -19,6 +19,21 @@ class BasicAdapter extends RecyclerView.Adapter<BasicAdapter.ViewHolder> {
 
   private final List<Item> items = new ArrayList<>();
 
+  @Override public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    Log.d(TAG, String.format("onCreateViewHolder(), size = %1$s", items.size()));
+    return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.row_basic_item, parent, false));
+  }
+
+  @Override public void onBindViewHolder(ViewHolder holder, int position) {
+    Log.d(TAG, String.format("onBindViewHolder(), size = %1$s", items.size()));
+    final Item item = items.get(position);
+    holder.uuidView.setText(item.uuid());
+  }
+
+  @Override public int getItemCount() {
+    return items.size();
+  }
+
   void addItems(@NonNull List<Item> items) {
     Log.d(TAG, "addItems()");
     final boolean shouldReCreate = this.items.isEmpty();
@@ -50,21 +65,6 @@ class BasicAdapter extends RecyclerView.Adapter<BasicAdapter.ViewHolder> {
   void removeAll() {
     items.clear();
     notifyDataSetChanged();
-  }
-
-  @Override public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-    Log.d(TAG, String.format("onCreateViewHolder(), size = %1$s", items.size()));
-    return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.row_basic_item, parent, false));
-  }
-
-  @Override public void onBindViewHolder(ViewHolder holder, int position) {
-    Log.d(TAG, String.format("onBindViewHolder(), size = %1$s", items.size()));
-    final Item item = items.get(position);
-    holder.uuidView.setText(item.uuid());
-  }
-
-  @Override public int getItemCount() {
-    return items.size();
   }
 
   static class ViewHolder extends RecyclerView.ViewHolder {
