@@ -13,38 +13,39 @@
   <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:weightSum="4">
 
     <Button
       android:id="@+id/btn_add_ten"
-      style="@style/ButtonAction"
+      style="@style/BaseButton.ButtonAction"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_weight="1"
+      android:layout_weight="1.05"
       android:text="Add 10"/>
 
     <Button
       android:id="@+id/btn_add_one"
-      style="@style/ButtonAction"
+      style="@style/BaseButton.ButtonAction"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_weight="1"
+      android:layout_weight="1.05"
       android:text="Add 1"/>
 
     <Button
       android:id="@+id/btn_remove_one"
-      style="@style/ButtonAction"
+      style="@style/BaseButton.ButtonAction"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_weight="1"
+      android:layout_weight="0.95"
       android:text="Remove 1"/>
 
     <Button
       android:id="@+id/btn_remove_all"
-      style="@style/ButtonAction"
+      style="@style/BaseButton.ButtonAction"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_weight="1"
+      android:layout_weight="0.95"
       android:text="Remove all"/>
   </LinearLayout>
 
