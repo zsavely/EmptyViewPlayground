@@ -1,3 +1,4 @@
 <resources>
-  <string name="app_name">RadicalRecyclerView</string>
+  <string name="app_label_name">RV EmptyView</string>
+  <string name="app_name">EmptyView RecyclerView</string>
 </resources>
