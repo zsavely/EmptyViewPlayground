@@ -63,8 +63,10 @@ class BasicAdapter extends RecyclerView.Adapter<BasicAdapter.ViewHolder> {
   }
 
   void removeAll() {
-    items.clear();
-    notifyDataSetChanged();
+    if (items.size() > 0) {
+      items.clear();
+      notifyDataSetChanged();
+    }
   }
 
   static class ViewHolder extends RecyclerView.ViewHolder {
