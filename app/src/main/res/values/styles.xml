@@ -5,7 +5,10 @@
     <!-- Customize your theme here. -->
   </style>
 
-  <style name="ButtonAction" parent="android:Widget.Button">
+  <style name="BaseButton" parent="android:Widget.Button">
+  </style>
+
+  <style name="BaseButton.ButtonAction">
     <item name="android:textSize">10sp</item>
   </style>
 </resources>

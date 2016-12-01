@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-  <style name="ButtonAction" parent="android:Widget.Material.Button">
-    <item name="android:textSize">10sp</item>
+  <style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">
+  </style>
+
+  <style name="BaseButton" parent="android:Widget.Material.Button">
   </style>
 
 </resources>
